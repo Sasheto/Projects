@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Console - Example</title>
+    <link rel="stylesheet" type="text/css" href="styles/js-console.css">
+    
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Insert numbers separated by ',': </label>
+            <input type="text" id="tb-first"/>
+        </div>          
+        <div id="inputbutton">
+            <a href="#" onclick="onMaxEqualSequenceButtonClick()">Max Equal Sequence</a>
+        </div>
+    </div>
+    <div id="console">
+    </div>
+    <script src="scripts/js-console.js">      
+    </script>         
+    <script>                                                         
+
+        function onMaxEqualSequenceButtonClick() {
+            var FirstArray = jsConsole.readNumbersArray("#tb-first", ',');
+            
+            var Element = FirstArray[0];
+            var MaxElement = Element;
+            var Maxcount = 0;
+            var count = 0;
+            var i;
+            for (i = 1; i < FirstArray.length; i++)
+            {
+                if (FirstArray[i] == Element)
+                {
+                    count++;
+                    if (count > Maxcount)
+                    {
+                        Maxcount = count;
+                        MaxElement = Element;
+                    }
+                }
+                else
+                {
+                    Element = FirstArray[i];
+                    count = 0;
+                }
+            }
+
+            jsConsole.write("{");
+            jsConsole.write(MaxElement);
+            for (i = 0; i < Maxcount; i++)
+            {
+                jsConsole.write("," + MaxElement);
+            }
+            jsConsole.writeLine("}");
+            
+
+        }                                           
+    </script>             
+</body>
+</html>

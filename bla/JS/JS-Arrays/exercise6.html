@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Given numbers count</title>
+</head>
+<body>
+	<p style="font-size: 20px;">Numbers: 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3</p>
+	<p style="font-size: 20px;">Click to find the most frequent number.</p>
+	<input type="submit" onclick="find()" value="Find!" />
+
+	<script>
+		function find(){
+		    var array = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3]
+		      , maxLength = 1
+		      , maxIndex = 0
+		      , currentLength = 0
+
+		    array.sort(function(a, b) {
+		        return a - b
+		    })
+
+		    array.reduce(function(a, b, i) {
+		        currentLength = a === b ? currentLength + 1 : 1
+
+		        if (currentLength > maxLength) {
+		            maxLength = currentLength
+		            maxIndex = i - currentLength + 1
+		        }
+
+		        return b
+		    })
+
+		    document.write(array[maxIndex] + " (" + maxLength + " times)");
+		}
+	</script>
+
+</body>
+</html>

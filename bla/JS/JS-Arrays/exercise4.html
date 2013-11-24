@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Maximal increasing sequence in array</title>
+</head>
+<body>
+	<p style="font-size: 20px;">Array: 3, 2, 3, 4, 2, 2, 4</p>
+	<p style="font-size: 20px;">Click to show the maximal increasing sequence in the array.</p>
+	<input type="submit" onclick="check()" value="Show!" />
+
+	<script>
+		function check(){
+
+		    var array = [3, 2, 3, 4, 2, 2, 4]
+		      , i
+		      , maxLength = 1
+		      , maxIndex = 0
+		      , currentLength = 1
+
+		    array.reduce(function(a, b, i) {
+		        currentLength = a < b ? currentLength + 1 : 1
+
+		        if (currentLength > maxLength) {
+		            maxLength = currentLength
+		            maxIndex = i - currentLength + 1
+		        }
+
+		        return b
+		    })
+
+		    for (i = 0; i < maxLength; i++)
+
+		        document.write(array[maxIndex + i] + ",");
+		}
+	</script>
+
+</body>
+</html>

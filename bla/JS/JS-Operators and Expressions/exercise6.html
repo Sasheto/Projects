@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Third bit</title>
+</head>
+<body>
+	<input type="number" id="r" name="number" placeholder="radius"/>
+	<input type="number" id="x" name="number" placeholder="x"/>
+	<input type="number" id="y" name="number" placeholder="y" />
+	
+	<input type="submit" onclick="check()" value="Check" />
+	<script>
+	function check(){
+	    var r = document.getElementById('r').value;
+	    var x = document.getElementById('x').value;
+	    var y = document.getElementById('y').value;
+
+	 	var result = (x * x + y * y < r * r)
+
+		if(result){
+			alert("The point (" + x + "x" + y + ") is inside the circle with radius(" + r + "): " + result);
+		} else {
+			alert("The point (" + x + "x" + y + ") is inside the circle with radius(" + r + "): " + result);
+		}}
+</script>
+
+</body>
+</html>

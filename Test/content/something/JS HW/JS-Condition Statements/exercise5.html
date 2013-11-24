@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Numbers</title>
+</head>
+<body>
+	<input type="number" id="number" placeholder="Enter number" />
+	
+	<input type="submit" onclick="check()" value="Show the number with words" />
+	
+	 <script>
+	 function check(){
+	    var n = document.getElementById('number').value;
+
+	    var words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
+
+	    document.write(words[n]);
+	 }
+	</script>
+</html>

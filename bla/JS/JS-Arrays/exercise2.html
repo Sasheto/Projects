@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>JS Console - Example</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	
+</head>
+<body>
+	<div id="inputdiv">
+		<div class="input">
+			<label for="tb-first">First string: </label>
+			<input type="text" id="tb-first"/>
+		</div>							  
+		<div class="input">		
+			<label for="tb-second">Second string: </label>
+			<input type="text" id="tb-second"/>
+		</div>
+		<div id="inputbutton">
+			<a href="#" onclick="onFindBiggerButtonClick()">Compare</a>
+		</div>
+	</div>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>		  
+	<script>														 
+
+		function onFindBiggerButtonClick() {
+			var first = jsConsole.read("#tb-first");
+			var second = jsConsole.read("#tb-second");
+			var FirstRow = first.split('');
+			var SecondRow = second.split('');
+			var cleter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+			var sleter = "abcdefghijklmnopqrstuvwxyz".split('');
+			var IsEqual = true;
+			var i;
+			for (i = 0; i < Math.max(FirstRow.length, SecondRow.length); i++)
+			{
+				if (FirstRow[i] != SecondRow[i])
+				{
+					var resultF = cleter.indexOf(FirstRow[i]);
+					var resultS = cleter.indexOf(SecondRow[i]);
+					if (resultF == -1)
+					{
+						resultF = sleter.indexOf(FirstRow[i]);
+					}
+					if (resultS == -1)
+					{
+						resultS = sleter.indexOf(SecondRow[i]);
+					}
+					if (resultF < resultS)
+					{
+						jsConsole.writeLine("First string is lexicographically smaller");
+						IsEqual = false;
+						break;
+					}
+					else
+					{
+						jsConsole.writeLine("Second string is lexicographically smaller");
+						IsEqual = false;
+						break;
+					}
+				}
+				else if (i == FirstRow.Length - 1 && i != SecondRow.Length - 1)
+				{
+					jsConsole.writeLine("First string is lexicographically smaller");
+					IsEqual = false;
+					break;
+				}
+				else if (i != FirstRow.Length - 1 && i == SecondRow.Length - 1)
+				{
+					jsConsole.writeLine("Second string is lexicographically smaller");
+					IsEqual = false;
+					break;
+				}
+				else
+					IsEqual = true;
+			}
+			if (IsEqual == true)
+			{
+				jsConsole.writeLine("Two strings are lexicographically equal");
+			}
+
+		}											
+	</script>			  
+</body>
+</html>

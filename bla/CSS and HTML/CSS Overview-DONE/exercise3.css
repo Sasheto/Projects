@@ -1,0 +1,29 @@
+body{
+    background: #A9A9A9;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+nav a{
+    font-weight: bold;
+}
+nav a.current{
+    background: #CCC;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    color: #FAFAD2;
+}
+body > header, body > footer{
+    text-align: center;
+}
+article footer a{
+    color: inherit;
+}

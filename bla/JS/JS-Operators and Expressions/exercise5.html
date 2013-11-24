@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Third bit</title>
+</head>
+<body>
+	<input type="number" id="number" name="number" />
+	<input type="submit" onclick="check()" value="Check" />
+	<script>
+	function check(){
+	    var n = document.getElementById('number').value;
+	    var isThirdBitOne = !(n >> 3 & 1)
+
+	    if (isThirdBitOne){
+	    	alert("The third bit of " + n + " is one?: " + isThirdBitOne);
+	    } else {
+	    	alert("The third bit of " + n + " is one?: " + isThirdBitOne);
+	}}
+</script>
+
+</body>
+</html>

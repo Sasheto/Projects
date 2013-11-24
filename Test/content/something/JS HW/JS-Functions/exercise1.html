@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Last Digit</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="Enter numbers" />
+
+    <input type="submit" onclick="find()" value="Last digit?" />
+    <script>
+        function find() {
+
+            var n = document.getElementById('number').value;
+            var getDigitName = (function() {
+                var digitNames = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
+                return function(n) {
+                    return digitNames[n]
+                }
+            }())
+
+            function getLastDigit(n) {
+                return n % 10
+            }
+
+            document.write(getDigitName(getLastDigit(n)));
+        }
+    </script>
+</body>
+</html>

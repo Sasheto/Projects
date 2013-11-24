@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Third Digit</title>
+</head>
+<body>
+	<input type="number" id="number" name="number" />
+	<input type="submit" onclick="check()" value="Check" />
+	<script>
+		function check(){
+			var number = document.getElementById('number').value;
+				number = Math.floor(number / 100);
+				number = number % 10;
+
+			if(number ==7){
+				alert("The third(right to left) number is 7!");
+			} else {
+				alert("The third(right to left) number isn't 7!");
+			}}
+	</script>
+</body>
+</html>

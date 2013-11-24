@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Print N numbers</title>
+</head>
+<body>
+	<input type="number" id="number" />
+	<input type="submit" onclick="print()" value="Print numbers" />
+
+	<script>
+		function print(){
+
+	    var n = document.getElementById('number').value;
+
+	    while (n--) document.write(n + 1 + "<br />")
+	}
+	</script>
+	
+</body>
+</html>

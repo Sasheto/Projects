@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Greatest of five</title>
+</head>
+<body>
+	<input type="number" id="first" name="number" placeholder="First number"/>
+	<input type="number" id="second" name="number" placeholder="Second number"/>
+	<input type="number" id="third" name="number" placeholder="Third number"/>
+	<input type="number" id="fourth" name="number" placeholder="Fourth number"/>
+	<input type="number" id="fifth" name="number" placeholder="Fifth number"/>
+
+	<input type="submit" onclick="check()" value="Biggest?" />
+
+	<script type="text/javascript">
+	function check(){
+		var n1 = document.getElementById('first').value;
+		var n2 = document.getElementById('second').value;
+		var n3 = document.getElementById('third').value;
+		var n4 = document.getElementById('fourth').value;
+		var n5 = document.getElementById('fifth').value;
+
+		var numbers = [n1, n2, n3, n4, n5]
+
+		var max = numbers.reduce(function(a, b) {
+		            return a > b ? a : b
+		        })
+
+	    document.write(max);
+	}
+	</script>
+</body>
+</html>

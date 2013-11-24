@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <style>
+        table{
+          border-collapse:collapse;
+          margin:0px;
+          padding:0px;
+        }
+        #result{
+            width:100%;
+            text-align:right;
+            border:none;
+        }
+        .bt
+        { 
+           width:100%;
+           border:none;
+        }
+        #zero{
+            width:100%;
+            border:none;
+        }
+    </style>
+    <!--Калкулатора има и функционалност. Надявам се че това не е проблем :)-->
+    <form name="calculator">
+        <table border="2px"  :>
+            <tr>
+                <td>
+                    <input class="bt" type="reset" value="Reset">
+                </td>
+                <td colspan="43">
+                    <input id="result" type="text" name="ans" placeholder="Result will come here!" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bt" type="button" value="1" onClick="document.calculator.ans.value+='1'"/>
+                </td>
+                <td>
+                    <input class="bt" type="button" value="2" onClick="document.calculator.ans.value+='2'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="3" onClick="document.calculator.ans.value+='4'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="+" onClick="document.calculator.ans.value+='+'" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bt" type="button" value="4" onClick="document.calculator.ans.value+='4'" /
+                    ></td>
+                <td>
+                    <input class="bt" type="button" value="5" onClick="document.calculator.ans.value+='5'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="6" onClick="document.calculator.ans.value+='6'" />
+                </td>
+                <td>
+                    <input class="bt"  type="button" value="-" onClick="document.calculator.ans.value+='-'" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="bt" type="button" value="7" onClick="document.calculator.ans.value+='7'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="8" onClick="document.calculator.ans.value+='8'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="9" onClick="document.calculator.ans.value+='9'" />
+                </td>
+                <td>
+                    <input class="bt" type="button" value="*" onClick="document.calculator.ans.value+='*'" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input id="zero" type="button" value="0" onClick="document.calculator.ans.value+='0'"  />
+                </th>
+                <td>
+                    <input class="bt" type="button" value="/" onClick="document.calculator.ans.value+='/'" />
+                </td>
+                <td>
+                    <input class="bt"type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

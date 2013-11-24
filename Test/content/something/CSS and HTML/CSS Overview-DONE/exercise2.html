@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Promotion</title>
+	<style>
+		body{
+			font: 12px sans-serif;
+		}
+        table {
+	        width: 475px;
+	        border: 1px solid #BBB99D;
+	        border-spacing: 0;
+        }
+        td, th{
+        	margin: 3px;
+        	padding: 6px;
+        	border-left: 1px solid #BBB99D;
+        }
+        tr:nth-child(odd){
+        	background: #FFFFCC;
+        }
+        th {
+        	border-bottom: 1px solid #358709;
+        	border-left: 1px solid #358709;
+        	background: linear-gradient(#33CC33, #29A329);
+        	font-weight: normal;
+        	color: #FFF;
+        	text-align: left;
+        }
+		img{
+			display: inline-block;
+			margin-left: 1px;
+			width: 20px;
+			height: 15px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr id="top">
+				<th>Contact name</th>
+				<th>City</th>
+				<th>Country</th>
+				<th>Is Promoted</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			    <td>Maria Anders</td>
+			    <td>Berlin</td>
+			    <td><img src="images/germany.jpg"> Germany</td>
+			    <td><input disabled type="checkbox" /></td>
+			</tr>
+
+			<tr>
+			    <td>Ana Trujillo</td>
+			    <td>Mexico, D. F.</td>
+			    <td><img src="images/mexico.jpg"> Mexico</td>
+			    <td><input disabled type="checkbox" /></td>
+			</tr>
+
+			<tr>
+			    <td>Antonio Moreno</td>
+			    <td>Mexico, D. F.</td>
+			    <td><img src="images/mexico.jpg"> Mexico</td>
+			    <td><input disabled checked type="checkbox" /></td>
+			</tr>
+
+			<tr>
+			    <td>Thomas Hardy</td>
+			    <td>London</td>
+			    <td><img src="images/uk.jpg"> UK</td>
+			    <td><input disabled type="checkbox" /></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

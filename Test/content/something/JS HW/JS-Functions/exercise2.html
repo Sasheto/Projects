@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Reverse digits</title>
+</head>
+<body>
+	<input type="number" id="number" placeholder="Enter numbers" />
+
+	<input type="submit" onclick="reverse()" value="Reverse digits" />
+	<script>
+	    function reverse() {
+
+	        var n = document.getElementById('number').value;
+	   		var reverseDigits = (function() {
+	        function reverse(n, r) {
+	            return n === 0 ? r : reverse(parseInt(n / 10, 10), r * 10 + n % 10)
+	        }
+
+	        return function(n) {
+	            return reverse(n, 0)
+	        }
+		    }())
+
+		    document.write(reverseDigits(n));
+		}
+	</script>
+</body>
+</html>

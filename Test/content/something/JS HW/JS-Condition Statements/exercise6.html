@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Quadric equation</title>
+</head>
+<body>
+	<input type="number" id="first" name="number" placeholder="First number"/>
+	<input type="number" id="second" name="number" placeholder="Second number"/>
+	<input type="number" id="third" name="number" placeholder="Third number"/>
+
+	<input type="submit" onclick="check()" value="Solve" />
+
+	<script type="text/javascript">
+	function check(){
+	var a = document.getElementById('first').value;
+	var b = document.getElementById('second').value;
+	var c = document.getElementById('third').value;
+
+	var d = b * b - 4 * a * c
+
+	    document.write((-b + Math.sqrt(d)) / (2 * a) + "<br />")
+	    document.write((-b - Math.sqrt(d)) / (2 * a))
+	}
+</script>
+
+</body>
+</html>

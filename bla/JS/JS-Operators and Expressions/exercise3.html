@@ -1,0 +1,22 @@
+<!doctype hmtl>
+<html>
+<head>
+	<title>Rectangle</title>
+</head>
+<body>
+	<input type="number" id="width" name="number" />
+	<input type="number" id="height" name="number" />
+	<input type="submit" onclick="sum()" value="Sum" />
+<script>
+	function sum() {
+	var width = document.getElementById('width').value;
+	var height = document.getElementById('height').value;
+
+	var area = width * height
+
+	alert("The area of rectangle is: " + area);
+	}
+</script>
+
+</body>
+</html>

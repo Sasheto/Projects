@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>We are living IN an yellow submarine. We don't have anything else. Inside the submarine is very tight. 
+	So we are drinking all the day. We will move out of it in 5 days.</p>
+	<p style="font-style: italic; font-size: 20px;">How many times the word "in" is repeating in the text? Click the button to find out!</p>
+
+	<input type="submit" onclick="repeat()" value="Click!" />
+	<script>
+		function repeat(){
+
+		    function countRepeatingSubstring(text, word, caseSensitive) {
+		        var regExp = new RegExp('\\b' + word + '\\b', 'g' + (caseSensitive ? '' : 'i'))
+
+		          , match = text.match(regExp)
+
+		        return match ? match.length : -1
+		    }
+
+		    document.write(countRepeatingSubstring('We are living IN an yellow submarine. We don\'t have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.', 'in'))
+		}
+	</script>
+</body>
+</html>

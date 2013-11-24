@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="submit" onclick="show()" value="show" />
+
+	<script>
+		function show(){
+		    ;[document, window, navigator].forEach(function(object) {
+		        var properties = []
+
+		        for (properties[properties.length] in object);
+
+		        properties.sort()
+
+		        document.write(properties.shift()+ "---" + properties.pop())
+		    })
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Repeating values</title>
+</head>
+<body>
+	<p>Numbers: 1,2,3,4,5,6,7,8,8,8,8,2,3,4,5,6,2,3,4,5,6,2,1,2,3,4,6,8,9,5,2</p>
+	<p>Click button to see how many times theese numbers are repeated!</p>
+
+	<input type="submit" onclick="repeat()" value="Repeat?" />
+	<script>
+		function repeat() {
+
+
+		    function countOccurences(array, element) {
+		        return array.filter(function(el) {
+		            return el === element
+		        }).length
+		    }
+
+		    // Test function
+		    ;(function() {
+		        var array = [1,2,3,4,5,6,7,8,8,8,8,2,3,4,5,6,2,3,4,5,6,2,1,2,3,4,6,8,9,5,2]
+		          , i
+
+		        for (i = 0; i < 10; i++)
+		            document.write(i + ": " + countOccurences(array, i) + " times" + "<br />")
+		    }())
+		}
+	</script>
+</body>
+</html>

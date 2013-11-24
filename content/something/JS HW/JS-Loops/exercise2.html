@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Print N numbers not devisible to 3 and 7</title>
+</head>
+<body>
+	<input type="number" id="number" />
+	<input type="submit" onclick="print()" value="Print numbers" />
+
+	<script>
+		function print(){
+
+	    var n = document.getElementById('number').value;
+	    var i;
+
+    for (i = 1; i <= n; i++)
+        if (!(i % 3 == 0 && i % 7 == 0)) 
+
+        document.write(i + "<br />")
+}
+</script>
+
+</body>
+</html>

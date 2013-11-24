@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Is point in circle and out of rectangle?</title>
+</head>
+<body>
+	<input type="submit" onclick="check()" value="check"/>
+	<script>
+		function check(){
+
+	    var px = 0
+	      , py = 2
+	      , kx = 1
+	      , ky = 1
+	      , kr = 3
+	      , rx = -1
+	      , ry = 1
+	      , rw = 6
+	      , rh = 2
+
+	      , isInCircle = Math.pow(px - kx, 2) + Math.pow(py - ky, 2) < Math.pow(kr, 2)
+	      , isOutOfRectangle = px < rx || px > rx + rw || py > ry || py < ry - rh
+
+	    document.write('Is the point in circle and out of rectangle?: ', (isInCircle && isOutOfRectangle));
+	}
+	</script>
+</body>
+</html>

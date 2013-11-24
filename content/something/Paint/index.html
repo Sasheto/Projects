@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paint</title>
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+</head>
+<body>
+	<div id="toolbar">
+		<div id="rad">
+			Radius <span id="radval">10</span>
+			<div id="decrad" class="radcontrol">-</div>
+			<div id="incrad" class="radcontrol">+</div>
+		</div>
+		<div id="colors">
+		</div>
+		<div id="save">
+			<iframe id="downloadframe" hidden=yes></iframe>
+			Save
+		</div>
+		<div id="clear">
+			Clear Form
+		</div>
+	</div>
+	<canvas id="canvas" style="display: block">
+		Sorry, your browser cannot open this application.
+	</canvas>
+	<script src="js/main.js"></script>
+	<script src="js/radius.js"></script>
+	<script src="js/colors.js"></script>
+	<script src="js/reset.js"></script>
+	<script src="js/save.js"></script>
+</body>
+</html>

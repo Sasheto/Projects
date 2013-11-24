@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Multiple by 5</title>
+	<style>
+		p{
+			font-size: 30px;
+		}
+		div{
+			font-family: sans-serif;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<p>Numbers are on the console</p>
+	<div>Note: If they doesn't show up, press F5!</div>
+	<script>
+	;(function (){
+
+	    var array = Array.apply(Array, new Array(20)).map(function(el, i) {
+	        return i * 5
+	    })
+
+	    console.log(array);
+	}())
+	</script>
+
+</body>
+</html>

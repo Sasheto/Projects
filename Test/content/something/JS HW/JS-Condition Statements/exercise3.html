@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Biggest of three integers</title>
+</head>
+<body>
+	<input type="number" id="first" name="number" placeholder="First number"/>
+	<input type="number" id="second" name="number" placeholder="Second number"/>
+	<input type="number" id="third" name="number" placeholder="Third number"/>
+
+	<input type="submit" onclick="check()" value="Biggest?" />
+
+	<script type="text/javascript">
+	function check(){
+	var n1 = document.getElementById('first').value;
+	var n2 = document.getElementById('second').value;
+	var n3 = document.getElementById('third').value;
+
+    var max
+
+    if (n1 < n2)
+        if (n2 < n3 ) max = n3
+
+        else max = n2
+
+    else
+        if (n1 < n3) max = n3
+
+        else max = n1
+
+    document.write("The biggest number is: " + max);
+	}
+	</script>
+
+</body>
+</html>

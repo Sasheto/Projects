@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Two Integers</title>
+</head>
+<body>
+	<p>If the first number is greater than the second one, they will change their places.</p>
+	<input type="number" id="first" name="number" placeholder="Enter first number."/>
+	<input type="number" id="second" name="number" placeholder="Enter second number."/>
+	<input type="submit" onclick="change()" value="Check" />
+	<script>
+		function change(){
+
+		var a = document.getElementById('first').value;
+		var b = document.getElementById('second').value;
+
+		if(a > b)
+		    a = [b, b = a][0]
+
+		document.write(a + "-" + b);
+		}
+	</script>
+</body>
+</html>
